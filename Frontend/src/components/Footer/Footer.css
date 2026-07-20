@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.footer { font-family: 'Poppins', sans-serif; background: #1B3A6B; color: #cdd5e0; }
+
+.footer-top { padding: 60px 40px 40px; }
+.footer-container {
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.4fr 1.4fr;
+  gap: 36px;
+}
+
+
+.navbar-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.logo-img { width: 40px; height: 40px; object-fit: contain; }
+.footer-logo-name { font-size: 16px; font-weight: 700; color: #fff; letter-spacing: 1px; display: block; }
+.footer-logo-sub { font-size: 8px; color: #F5A623; letter-spacing: 2px; display: block; }
+.footer-brand-desc { font-size: 13px; color: #a0b0c8; line-height: 1.7; margin-bottom: 18px; }
+.footer-socials { display: flex; gap: 8px; }
+.fsocial {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 32px; height: 32px; border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 6px; color: #fff; text-decoration: none;
+  font-size: 12px; font-weight: 700; transition: all 0.2s;
+}
+.fsocial:hover { background: #F5A623; border-color: #F5A623; }
+
+.footer-heading {
+  font-size: 15px; font-weight: 700; color: #fff;
+  margin-bottom: 18px; padding-bottom: 10px;
+  border-bottom: 2px solid #F5A623; display: inline-block;
+}
+
+.footer-links { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.footer-links li a { font-size: 13px; color: #a0b0c8; text-decoration: none; transition: color 0.2s; }
+.footer-links li a:hover { color: #F5A623; }
+
+.footer-contact-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px; }
+.footer-contact-list li { display: flex; gap: 10px; align-items: flex-start; font-size: 13px; color: #a0b0c8; line-height: 1.6; }
+.contact-icon { font-size: 15px; margin-top: 1px; flex-shrink: 0; }
+
+.footer-newsletter-desc { font-size: 13px; color: #a0b0c8; margin-bottom: 16px; line-height: 1.6; }
+.newsletter-form { display: flex; flex-direction: column; gap: 10px; }
+.newsletter-form input {
+  padding: 10px 14px; border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.08);
+  color: #fff; font-size: 13px; font-family: 'Poppins', sans-serif;
+  outline: none; transition: border 0.2s;
+}
+.newsletter-form input::placeholder { color: #7a90a8; }
+.newsletter-form input:focus { border-color: #F5A623; }
+.newsletter-form button {
+  padding: 11px; background: #F5A623; color: #fff;
+  border: none; border-radius: 6px; font-size: 14px;
+  font-weight: 600; font-family: 'Poppins', sans-serif;
+  cursor: pointer; transition: background 0.2s;
+}
+.newsletter-form button:hover { background: #d4891a; }
+.subscribe-message { font-size: 12.5px; margin-top: 10px; color: #9be79b; }
+
+.footer-bottom { background: #132d55; padding: 16px 40px; }
+.footer-bottom-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 13px; color: #8090a8;
+}
+.footer-bottom-links { display: flex; align-items: center; gap: 10px; }
+.footer-bottom-links a { color: #8090a8; text-decoration: none; transition: color 0.2s; }
+.footer-bottom-links a:hover { color: #F5A623; }
+.sep { opacity: 0.4; }
+
+
+.footer-link-btn{
+    background:none;
+    border:none;
+    color:#8090a8;
+    cursor:pointer;
+    font-size:13px;
+    font-family:'Poppins',sans-serif;
+    transition:.3s;
+}
+
+.footer-link-btn:hover{
+    color:#F5A623;
+}
+
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+========================================================= */
+
+/* ---------- Large Tablets ---------- */
+@media (max-width: 1024px) {
+
+  .footer-top{
+    padding:50px 25px 35px;
+  }
+
+  .footer-container{
+    grid-template-columns:repeat(2,1fr);
+    gap:35px;
+  }
+
+  .brand-col{
+    grid-column:1/-1;
+  }
+
+  .footer-bottom{
+    padding:18px 25px;
+  }
+
+  .footer-bottom-inner{
+    flex-direction:column;
+    gap:10px;
+    text-align:center;
+  }
+
+}
+
+
+/* ---------- Tablets ---------- */
+@media (max-width:768px){
+
+  .footer-top{
+    padding:45px 20px 30px;
+  }
+
+  .footer-container{
+    grid-template-columns:1fr;
+    gap:32px;
+    text-align:center;
+  }
+
+  .navbar-logo{
+    justify-content:center;
+  }
+
+  .footer-heading{
+    display:inline-block;
+  }
+
+  .footer-brand-desc{
+    max-width:450px;
+    margin:0 auto 20px;
+  }
+
+  .footer-socials{
+    justify-content:center;
+  }
+
+  .footer-links{
+    align-items:center;
+  }
+
+  .footer-contact-list li{
+    justify-content:center;
+    text-align:left;
+  }
+
+  .newsletter-form{
+    max-width:420px;
+    margin:auto;
+  }
+
+  .newsletter-form input,
+  .newsletter-form button{
+    width:100%;
+  }
+
+  .footer-bottom{
+    padding:20px;
+  }
+
+  .footer-bottom-inner{
+    flex-direction:column;
+    gap:12px;
+    text-align:center;
+  }
+
+  .footer-bottom-links{
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+
+}
+
+
+/* ---------- Mobile ---------- */
+@media (max-width:576px){
+
+  .footer-top{
+    padding:40px 18px 28px;
+  }
+
+  .footer-container{
+    gap:28px;
+  }
+
+  .logo-img{
+    width:46px;
+    height:46px;
+  }
+
+  .footer-logo-name{
+    font-size:18px;
+  }
+
+  .footer-logo-sub{
+    font-size:9px;
+  }
+
+  .footer-heading{
+    font-size:17px;
+    margin-bottom:15px;
+  }
+
+  .footer-brand-desc,
+  .footer-newsletter-desc,
+  .footer-links li a,
+  .footer-contact-list li{
+    font-size:14px;
+    line-height:1.8;
+  }
+
+  .footer-contact-list{
+    gap:18px;
+  }
+
+  .newsletter-form input{
+    padding:13px 15px;
+    font-size:14px;
+  }
+
+  .newsletter-form button{
+    padding:13px;
+    font-size:15px;
+  }
+
+  .footer-bottom{
+    padding:18px;
+  }
+
+  .footer-bottom-inner{
+    font-size:12px;
+    gap:10px;
+  }
+
+  .footer-bottom-links{
+    gap:8px;
+  }
+
+  .fsocial{
+    width:38px;
+    height:38px;
+    font-size:14px;
+  }
+
+}
+
+
+/* ---------- Small Phones ---------- */
+@media (max-width:380px){
+
+  .footer-top{
+    padding:35px 15px 25px;
+  }
+
+  .navbar-logo{
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .footer-logo-name{
+    font-size:17px;
+  }
+
+  .footer-logo-sub{
+    font-size:8px;
+  }
+
+  .footer-heading{
+    font-size:16px;
+  }
+
+  .footer-brand-desc,
+  .footer-links li a,
+  .footer-contact-list li,
+  .footer-newsletter-desc{
+    font-size:13px;
+  }
+
+  .footer-bottom-inner{
+    font-size:11px;
+  }
+
+}
