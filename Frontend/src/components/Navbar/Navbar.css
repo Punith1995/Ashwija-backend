@@ -50,9 +50,9 @@
   list-style: none; display: flex; align-items: center;
   gap: 0; margin-left: auto;
 }
-.nav-links li{
-    margin:0 2px;
-    position:relative;
+.nav-links li {
+  margin: 0 2px;
+  position: relative;
 }
 .nav-links li a, .nav-links li span {
   display: flex; align-items: center; gap: 3px;
@@ -64,9 +64,9 @@
   color: #F5A623;
 }
 .nav-links li.active > a, .nav-links li.active > span { border-bottom: 2px solid #F5A623; }
-.arrow{
-    font-size:10px;
-    transition:.3s;
+.arrow {
+  font-size: 10px;
+  transition: .3s;
 }
 
 /* DROPDOWN */
@@ -118,224 +118,207 @@
 
 /* ---------- Laptop ---------- */
 
-@media (max-width:1100px){
+@media (max-width: 1100px) {
 
-.navbar-container{
-    padding:0 20px;
-}
+  .navbar-container {
+    padding: 0 20px;
+  }
 
-.nav-links li a,
-.nav-links li span{
-    padding:8px;
-    font-size:13px;
-}
+  .nav-links li a,
+  .nav-links li span {
+    padding: 8px;
+    font-size: 13px;
+  }
 
-.btn-get-in-touch{
-    padding:8px 16px;
-}
-
-}
-
-
-/* ---------- Tablet ---------- */
-
-@media (max-width:900px){
-
-.topbar{
-    padding:8px 20px;
-    flex-direction:column;
-    gap:8px;
-    text-align:center;
-}
-
-.topbar-left{
-    flex-wrap:wrap;
-    justify-content:center;
-}
-
-.topbar-right{
-    justify-content:center;
-}
-
-.mobile-toggle{
-    display:block;
-    margin-left:auto;
-    z-index:1001;
-}
-
-.btn-get-in-touch{
-    display:none;
-}
-
-.nav-links{
-    list-style:none;
-    display:flex;
-    align-items:center;
-    gap:0;
-    margin-left:auto;
-}
-
-.nav-links.open{
-    left:0;
-}
-
-.nav-links li{
-    width:100%;
-}
-
-.nav-links li a,
-.nav-links li span{
-    padding:8px 10px;
-    font-size:13.5px;
-}
-
-.nav-links li.active>a,
-.nav-links li.active>span{
-    border-bottom:1px solid #eee;
-}
-
-.dropdown{
-
-    position:static;
-
-    box-shadow:none;
-
-    border:none;
-
-    width:100%;
-
-    margin-top:5px;
-
-    border-radius:0;
-
-    background:#f8f8f8;
-
-    max-height:none;
-}
-
-.dropdown li a{
-
-    padding:14px 20px;
-
-    font-size:15px;
-}
+  .btn-get-in-touch {
+    padding: 8px 16px;
+  }
 
 }
 
+/* ---------- Tablet & Mobile Menu ---------- */
+
+@media (max-width: 900px) {
+
+  .topbar {
+    padding: 8px 20px;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .topbar-left {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .topbar-right {
+    justify-content: center;
+  }
+
+  .mobile-toggle {
+    display: block;
+    margin-left: auto;
+    z-index: 1001;
+  }
+
+  .btn-get-in-touch {
+    display: none;
+  }
+
+  /* ===== MOBILE SLIDE-IN MENU ===== */
+  .nav-links {
+    position: fixed;
+    top: 70px;                       /* navbar height */
+    left: -100%;                     /* hidden off-screen by default */
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    margin-left: 0;
+    padding: 20px;
+    overflow-y: auto;
+    transition: left 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+
+  .nav-links.open {
+    left: 0;                         /* slides in when hamburger is clicked */
+  }
+
+  .nav-links li {
+    width: 100%;
+    margin: 0;
+  }
+
+  .nav-links li a,
+  .nav-links li span {
+    padding: 14px 10px;
+    font-size: 15px;
+    width: 100%;
+    border-bottom: 1px solid #f0f0f0;
+    border-radius: 0;
+    white-space: normal;
+  }
+
+  .nav-links li.active > a,
+  .nav-links li.active > span {
+    border-bottom: 1px solid #f0f0f0;
+    color: #F5A623;
+  }
+
+  /* dropdown becomes an inline expanding list */
+  .dropdown {
+    position: static;
+    box-shadow: none;
+    border: none;
+    width: 100%;
+    margin-top: 0;
+    border-radius: 0;
+    background: #f8f8f8;
+    max-height: none;
+  }
+
+  .dropdown li a {
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+
+}
 
 /* ---------- Mobile ---------- */
 
-@media (max-width:576px){
+@media (max-width: 576px) {
 
-.topbar{
+  .topbar {
+    padding: 10px 15px;
+    font-size: 12px;
+  }
 
-    padding:10px 15px;
+  .topbar-left {
+    flex-direction: column;
+    gap: 5px;
+  }
 
-    font-size:12px;
-}
+  .topbar-left .divider {
+    display: none;
+  }
 
-.topbar-left{
+  .topbar-right {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
 
-    flex-direction:column;
+  .social-icon {
+    width: 28px;
+    height: 28px;
+  }
 
-    gap:5px;
-}
+  .navbar-container {
+    height: 65px;
+    padding: 0 15px;
+  }
 
-.topbar-left .divider{
-    display:none;
-}
+  .logo-img {
+    width: 40px;
+    height: 40px;
+  }
 
-.topbar-right{
+  .logo-name {
+    font-size: 16px;
+  }
 
-    gap:8px;
+  .logo-sub {
+    font-size: 8px;
+  }
 
-    flex-wrap:wrap;
-}
+  .mobile-toggle {
+    font-size: 28px;
+    color: #1B3A6B;
+  }
 
-.social-icon{
+  .nav-links {
+    top: 65px;                       /* navbar is 65px here */
+    height: calc(100vh - 65px);
+    padding: 15px;
+  }
 
-    width:28px;
+  .nav-links li a,
+  .nav-links li span {
+    padding: 15px 0;
+    font-size: 15px;
+  }
 
-    height:28px;
-}
-
-.navbar-container{
-
-    height:65px;
-
-    padding:0 15px;
-}
-
-.logo-img{
-
-    width:40px;
-
-    height:40px;
-}
-
-.logo-name{
-
-    font-size:16px;
-}
-
-.logo-sub{
-
-    font-size:8px;
-}
-
-.mobile-toggle{
-
-    font-size:28px;
-
-    color:#1B3A6B;
-}
-
-.nav-links{
-
-    top:65px;
-
-    height:calc(100vh - 65px);
-
-    padding:15px;
-}
-
-.nav-links li a,
-.nav-links li span{
-
-    padding:15px 0;
-
-    font-size:15px;
-}
-
-.dropdown li a{
-
-    font-size:14px;
-
-    padding:12px 18px;
-}
+  .dropdown li a {
+    font-size: 14px;
+    padding: 12px 18px;
+  }
 
 }
-
 
 /* ---------- Small Phones ---------- */
 
-@media (max-width:380px){
+@media (max-width: 380px) {
 
-.logo-name{
-    font-size:14px;
-}
+  .logo-name {
+    font-size: 14px;
+  }
 
-.logo-sub{
-    font-size:7px;
-}
+  .logo-sub {
+    font-size: 7px;
+  }
 
-.mobile-toggle{
-    font-size:24px;
-}
+  .mobile-toggle {
+    font-size: 24px;
+  }
 
-.nav-links li a,
-.nav-links li span{
-    font-size:14px;
-}
+  .nav-links li a,
+  .nav-links li span {
+    font-size: 14px;
+  }
 
 }
